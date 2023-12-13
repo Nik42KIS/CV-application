@@ -1,14 +1,7 @@
-import { useState } from 'react';
 
-function Form() {
-  const [formData, setformData] = useState({});
-  function getFormData(targetInput) {
-    setformData({
-      ...formData,
-      [targetInput.id]: targetInput.value,
-    });
-    console.log(formData);
-  }
+
+function Form({formData, getFormData}) {
+ 
   
   return (
     <form>
@@ -30,7 +23,7 @@ function Form() {
             onChange={(event) => {
               getFormData(event.target);
             }}
-            value={formData.inputEmail}
+            value={formData.inputEmail} 
             type="email"
             id="inputEmail"
           />
