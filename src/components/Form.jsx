@@ -1,10 +1,10 @@
 
 
-function Form({formData, getFormData,editSavedCV}) {
+function Form({formData, getFormData,editSavedCV,cleanForm}) {
  
   
   return (
-    <form>
+    <form className="cv_form">
       <section className="form_general_info">
         <div>
           <label htmlFor="inputName">First name: </label>
@@ -87,7 +87,9 @@ function Form({formData, getFormData,editSavedCV}) {
         </div>
       </section>
 
-      <button className="reset_form">Clear</button>
+      <button onClick={(e)=>{
+        cleanForm(e)}} className="reset_form">Clean</button>
+        
       <button onClick={(e)=>{
         editSavedCV(e)}} className="save_form">Save</button>
     </form>

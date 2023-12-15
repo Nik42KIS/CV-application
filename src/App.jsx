@@ -6,27 +6,34 @@ import CV from './components/CV';
 
 function App() {
 
-  const [formData, setformData] = useState({});
+  const [formData, setFormData] = useState({});
   const [savedCV, setSavedCV] = useState('')
 
 function editSavedCV (event){
   event.preventDefault()
   setSavedCV(formData)
 }
+function cleanForm(event){
+  setFormData({})
+  event.target.parentElement.reset()
+  event.preventDefault()
+}
 
-
-  function getFormData(targetInput) {
-    console.log('before',formData);
-    setformData({
-      ...formData,
+function getFormData(targetInput) {
+  setFormData((prevFormData) => {
+    const updatedFormData = {
+      ...prevFormData,
       [targetInput.id]: targetInput.value,
-    });
-    console.log(formData);
-  }
+    };
+    console.log('updated formData', updatedFormData);
+    return updatedFormData;
+  });
+}
+
 
   return (
     <main>
-      <Form formData = {formData} editSavedCV ={editSavedCV} getFormData = {getFormData}/>
+      <Form cleanForm={cleanForm} formData = {formData} editSavedCV ={editSavedCV} getFormData = {getFormData}/>
       <CV savedCV = {savedCV}/>
     </main>
   )
