@@ -7,6 +7,14 @@ import CV from './components/CV';
 function App() {
 
   const [formData, setformData] = useState({});
+  const [savedCV, setSavedCV] = useState('')
+
+function editSavedCV (event){
+  event.preventDefault()
+  setSavedCV(formData)
+}
+
+
   function getFormData(targetInput) {
     console.log('before',formData);
     setformData({
@@ -18,8 +26,8 @@ function App() {
 
   return (
     <main>
-      <Form formData = {formData} getFormData = {getFormData}/>
-      <CV formData = {formData} />
+      <Form formData = {formData} editSavedCV ={editSavedCV} getFormData = {getFormData}/>
+      <CV savedCV = {savedCV}/>
     </main>
   )
 }

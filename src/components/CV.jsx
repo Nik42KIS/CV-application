@@ -1,8 +1,8 @@
 
 
 function CV(props){
-    
-    const data = props.formData;
+
+    const data = props.savedCV;
     return(
         <section className="cv_wrap">
 

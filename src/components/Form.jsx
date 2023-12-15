@@ -1,6 +1,6 @@
 
 
-function Form({formData, getFormData}) {
+function Form({formData, getFormData,editSavedCV}) {
  
   
   return (
@@ -88,7 +88,8 @@ function Form({formData, getFormData}) {
       </section>
 
       <button className="reset_form">Clear</button>
-      <button className="save_form">Save</button>
+      <button onClick={(e)=>{
+        editSavedCV(e)}} className="save_form">Save</button>
     </form>
   );
 }
