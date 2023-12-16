@@ -1,6 +1,6 @@
 
 import './styles/App.css'
-import Form from './components/Form'
+import Form from './components/FormComponent'
 import { useState } from 'react';
 import CV from './components/CV';
 

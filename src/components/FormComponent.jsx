@@ -1,10 +1,12 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
-function Form({formData, getFormData,editSavedCV,cleanForm}) {
+function FormComponent({formData, getFormData,editSavedCV,cleanForm}) {
  
   
   return (
-    <form className="cv_form">
+    <Form className="cv_form">
       <section className="form_general_info">
         <div>
           <label htmlFor="inputName">First name: </label>
@@ -87,13 +89,13 @@ function Form({formData, getFormData,editSavedCV,cleanForm}) {
         </div>
       </section>
 
-      <button onClick={(e)=>{
-        cleanForm(e)}} className="reset_form">Clean</button>
+      <Button variant="primary" type="submit" onClick={(e)=>{
+        cleanForm(e)}} className="reset_form">Clean</Button>
         
-      <button onClick={(e)=>{
-        editSavedCV(e)}} className="save_form">Save</button>
-    </form>
+      <Button variant="primary" type="submit" onClick={(e)=>{
+        editSavedCV(e)}} className="save_form">Save</Button>
+    </Form>
   );
 }
 
-export default Form;
+export default FormComponent;
