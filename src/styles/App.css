@@ -1,1 +1,21 @@
 
+main{
+  margin: 15px;
+}
+.cv_wrap > div{
+  background-color: aliceblue;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.2rem;
+  flex-wrap: wrap;
+ 
+}
+ul{
+  list-style-type: none ;
+}
+.cv_wrap > div > div{
+  display: flex;
+  justify-content: space-between;
+
+}
