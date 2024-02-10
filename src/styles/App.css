@@ -1,21 +1,39 @@
-
-main{
-  margin: 15px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.cv_wrap > div{
-  background-color: aliceblue;
+
+main {
+  padding: 0 80px;
+  background-color: rgb(104, 118, 131);
+}
+.cv_form {
+  background-color: #fdfdfd80;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 18px;
+  /* background-color: aliceblue; */
+}
+.cv_wrap {
+  position: fixed;
   height: 100vh;
+  margin: 10px;
+}
+.cv_wrap > div {
+  background-color: #fdfdfd;
+  max-width: 700px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   flex-wrap: wrap;
- 
 }
-ul{
-  list-style-type: none ;
+ul {
+  list-style-type: none;
 }
-.cv_wrap > div > div{
+.cv_wrap > div > div {
   display: flex;
   justify-content: space-between;
-
 }

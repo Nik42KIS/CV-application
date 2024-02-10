@@ -44,7 +44,7 @@ function App() {
             />
           </Container>
         </Col>
-        <Col sm={6}>
+        <Col sm={7}>
           <CV savedCV={savedCV} />
         </Col>
       </Row>
