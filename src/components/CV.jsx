@@ -7,16 +7,27 @@ function CV(props) {
     <section className="cv_wrap">
       <Container>
         <Col>
-          <Row>
+          <Row className="main_bio">
             <Col>
               <h2 className="first_name">{data.inputName}</h2>
             </Col>
             <Col>
-              <span className="email">{data.inputEmail}</span>
-              <span className="phone_number">{data.inputPhoneNumber}</span>
+              <span className="email">
+                <b>Email: </b>
+                {data.inputEmail}
+              </span>
+              <br />
+              <span className="phone_number">
+                <b>Phone number:</b>
+                {data.inputPhoneNumber}
+              </span>
             </Col>
           </Row>
-          <Row>
+          <Row className="education_info">
+            <div className='wrap_for_section_name'>
+              <span className="section_name">Education</span>
+            </div>
+
             <ul>
               <li>
                 <span className="school">{data.inputSchool}</span>
@@ -30,6 +41,10 @@ function CV(props) {
             </ul>
           </Row>
           <Row>
+            <div className='wrap_for_section_name'>
+              <span className="section_name">Work experience</span>
+            </div>
+
             <Col>
               <span className="company">{data.inputCompanyName}</span>
             </Col>

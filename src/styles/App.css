@@ -5,7 +5,7 @@
 }
 
 main {
-  padding: 0 80px;
+  padding: 0 160px;
   background-color: rgb(104, 118, 131);
 }
 .cv_form {
@@ -16,6 +16,7 @@ main {
   padding: 18px;
   /* background-color: aliceblue; */
 }
+
 .cv_wrap {
   position: fixed;
   height: 100vh;
@@ -23,17 +24,47 @@ main {
 }
 .cv_wrap > div {
   background-color: #fdfdfd;
-  max-width: 700px;
+  width: 660px;
   height: 100%;
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
   font-size: 1.2rem;
   flex-wrap: wrap;
 }
 ul {
   list-style-type: none;
+  height: 100%;
 }
 .cv_wrap > div > div {
   display: flex;
-  justify-content: space-between;
+  gap: 80px;
+  flex-direction: column;
+}
+
+.save_form_btn {
+  margin-left: 20px;
+}
+/* input {
+  font-size: 1.7rem;
+  font-weight: bold;
+} */
+.main_bio {
+  background-color: rgba(255, 217, 0, 0.699);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.education_info {
+  margin-top: 50px;
+}
+span.section_name {
+  max-width: 300px;
+  padding: 3px 10px;
+  background-color: #010101;
+  color: #fdfdfd;
+}
+
+.wrap_for_section_name {
+  margin-bottom: 25px;
 }
